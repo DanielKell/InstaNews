@@ -1,1 +1,13 @@
-.
+@import 'sass/_variables.scss';
+
+html { 
+    color: gray;
+    background-color: $bcgd-color;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+	width: 100%;
+	box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+ }

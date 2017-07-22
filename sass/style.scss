@@ -1,57 +1,31 @@
-@import 'scss/variables';
-@import 'scss/mixins';
-@import 'scss/reset';ject
- 
-/* ------- Gloabal Settings  */
-
-html { 
-    color: gray;
-    background-color: black;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: normal;
-	width: 100%;
-	box-sizing: border-box;
-    margin: 0 auto;
-    display: flex;
- }
+@import 'sass/_variables.scss';
+@import 'sass/_globals.scss';
 
 /* ------- Modile View ------- */
 
 select {
     width: 100px;
-    margin-top: 50px;
-    margin-left: 250px;
-    justify-content: center;
 }
 
 .logo {
-    display: block;
-    margin: auto;
     text-align: center;
-
+    padding-top: 100px;
 }
 
 .select {
-    margin-top: 50px;
-    margin-left: 250px;
     text-align: center;
-    display: flex;
 } 
 
 p {
-    justify-content: center;
+    text-align: center;
     font-weight: lighter;
     color: gray;
+}d
+
+.news {
+    background-size: contain;
 }
 
-.web-info {
-    color: gray;
-    font-size: 9px;
-    font-size: .9rem;
-    text-align: center;
-    padding: 0 2rem;
-}
 
 /* ------- Tablet View -------  */
 
