@@ -1,44 +1,9 @@
 @import 'sass/_variables.scss';
+@import 'sass/_reset.scss';
+@import 'sass/_fonts.scss';
+@import 'sass/_mixins.scss';
 @import 'sass/_globals.scss';
-
-/* ------- Modile View ------- */
-
-select {
-    width: 100px;
-}
-
-.logo {
-    text-align: center;
-    padding-top: 100px;
-}
-
-.select {
-    text-align: center;
-} 
-
-p {
-    text-align: center;
-    font-weight: lighter;
-    color: gray;
-}d
-
-.news {
-    background-size: contain;
-}
-
-
-/* ------- Tablet View -------  */
-
-@media only screen and (min-width: 600px){
-
-
-
-}
-
-/* ------- Desktop View ------- */
-
-@media only screen and (min-width:1240px){
-
-
-
-}
+@import 'sass/_selectric.scss';
+@import 'sass/_header.scss';
+@import 'sass/_content.scss';
+@import 'sass/_footer.scss';

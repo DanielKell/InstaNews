@@ -1,0 +1,42 @@
+.news {
+    position: relative;
+    display: flex;
+    
+    p {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        background: rgba(0, 0, 0, 0.6)
+    }   
+
+    ne
+
+    .news-img a {
+            display: flex;
+            flex: 0 1 100%;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+    }
+}
+
+
+.articles {
+    position: relative;
+
+    .loader {
+        display: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
