@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
   $('.section-selector').change(function () {
 
     var input = $('#selection').val();
@@ -29,8 +28,8 @@ $(document).ready(function () {
         $.each(articlesWithImages, function (key, value) {
 
           articles += '<div class="news">';
-          articles += '<a href="' + value.url + '" target="_blank">' + '<img src="' + value.multimedia[1].url + '" id="news-img"/>' + '</a>';
-          articles += '<p>' + value.abstract + '</p>'
+          articles += '<a href="' + value.url + '" target="_blank">' + '<img src="' + value.multimedia[4].url + '" id="news-img"/>' + '</a>';
+          articles += '<p class="abstract">' + value.abstract + '</p>'
           articles += '</div>';
 
         });
@@ -42,7 +41,15 @@ $(document).ready(function () {
         throw err;
       });
 
+    //   $(".articles").hover(function() {
+    //     $("p").fadeIn(1000);
+    // }, function () {
+    //     $("p").fadeOut(1000);
+  });
 
   });
 
 });
+
+
+

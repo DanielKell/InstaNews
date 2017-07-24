@@ -1,9 +1,34 @@
-.logo {
+header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 50%;
-    margin-bottom: 15px;
+    align-items: center;
+    padding: 2rem;
 
+    .logo {
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    p {
+        margin-bottom: 15px;
+        align-self: center;
+    }
+    .section-selector {
+        align-self: center;
+        width: 100px;
+    }
 
+    @include tablet {
+        flex-direction: row;
+        flex-grow: 5rem;
+    }
+    @include desktop {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .logo {
+            padding-right: 3rem;
+            flex-grow: 1.5rem;
+        }
+    }
 }
