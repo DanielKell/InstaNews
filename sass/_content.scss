@@ -4,7 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    
+
     img {
         height: 40px;
         width: 40px;
@@ -15,16 +15,19 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+
     .news {
         position: relative;
         width: 100%;
         max-width: 100%;
+
         .abstract {
             position: absolute;
             bottom: 0%;
             color: $font-color;
             background: rgba(0, 0, 0, 0.6);
             flex: 0 1 100%;
+            display: none;
         }
         #news-img {
             display: flex;
@@ -36,7 +39,7 @@
             flex: 0 1 100%;
             flex-flow: wrap;
         }
-        &:hover {
+        &:hover > .abstract {
             display: block;
         }
         @include tablet {

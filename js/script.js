@@ -9,6 +9,8 @@ $(document).ready(function () {
       'api-key': "d4dad082902b43c791328b91dbc82d5a"
     });
 
+    $(".main-header").addClass('article-header')
+
     $.ajax({
         url: url,
         method: 'GET',
@@ -26,7 +28,7 @@ $(document).ready(function () {
           return article.multimedia.length // this is returning something true/false // if the answer is 0 it equals to false // 1+ = true
         }).slice(0, 12); // the slice is 
 
-        console.log(data);
+        // console.log(data);
 
         $.each(articlesWithImages, function (key, value) {
 
@@ -47,11 +49,11 @@ $(document).ready(function () {
         throw err;
       });
 
-    $(".news-img").mouseover(function () {
-      $(".news").children('.abstract').fadeIn(1000);
-    }, function () {
-      $(".news").children(".abstract").fadeOut(1000);
-    });
+    // $(".articles").hover(function () {
+    //   $(".news").children('.abstract').fadeIn(1000);
+    // }, function () {
+    //   $(".news").children(".abstract").fadeOut(1000);
+    // });
 
   });
 
