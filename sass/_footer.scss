@@ -1,11 +1,13 @@
-// .web-info {
-//     color: $footer-color;
-//     font-family: 'open_sanslight';
+.web-info {
+    color: $footer-color;
+    font-family: 'open_sanslight';
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     
-//     p {
-//         display: flex;
-//         flex-direction: row-reverse;
-//         justify-content: center;
-//         align-items: flex-end;
-//     }
-// }
+    @include desktop {
+        justify-content: flex-start;
+        padding: 3rem;
+    }
+}

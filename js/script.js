@@ -15,11 +15,8 @@ $(document).ready(function () {
       })
       .done(function (data) {
 
-        $("select").click(function () {
-          $(".loader").fadeIn(3000);
-        }, function () {
-          $(".loader").fadeOut(1000);
-        });
+        $(".loader").show();
+        $(".articles").hide();
 
         $('.news').remove();
 
@@ -40,14 +37,17 @@ $(document).ready(function () {
 
         });
 
-
         $('.articles').append(articles);
+
+        $(".loader").hide(2000);
+        $(".articles").show();
+
       })
       .fail(function (err) {
         throw err;
       });
 
-    $(".news-img").hover(function () {
+    $(".news-img").mouseover(function () {
       $(".news").children('.abstract').fadeIn(1000);
     }, function () {
       $(".news").children(".abstract").fadeOut(1000);

@@ -1,55 +1,51 @@
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    
+    img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
 .articles {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-
-    .loader {
-        display: none;
-        height: 40px;
-        width: 40px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     .news {
         position: relative;
         width: 100%;
         max-width: 100%;
-
         .abstract {
             position: absolute;
             bottom: 0%;
-            color: white;
+            color: $font-color;
             background: rgba(0, 0, 0, 0.6);
             flex: 0 1 100%;
-            display: none;
-        }   
-
+        }
         #news-img {
             display: flex;
             height: 420px;
             width: 100%;
             position: relative;
             object-fit: cover;
-            max-width: 100%;   
-            flex: 0 1 100%; 
-            flex-flow: wrap; 
+            max-width: 100%;
+            flex: 0 1 100%;
+            flex-flow: wrap;
         }
-
         &:hover {
             display: block;
         }
-
         @include tablet {
-                flex: 0 1 50%;
-                max-width: 50%;
-            }
-        
+            flex: 0 1 50%;
+            max-width: 50%;
+        }
         @include desktop {
-                flex: 0 1 25%;
-                max-width: 25%;
-            }
+            flex: 0 1 25%;
+            max-width: 25%;
+        }
     }
 }
