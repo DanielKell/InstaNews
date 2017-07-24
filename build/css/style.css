@@ -1,3 +1,48 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  color: #2d2d2d; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 @font-face {
   font-family: 'open_sansbold';
   src: url("../../assets/fonts/opensans-bold-webfont.woff2") format("woff2"), url("../../assets/fonts/opensans-bold-webfont.woff") format("woff");
@@ -29,7 +74,8 @@ body {
   font-family: "open_sanslight";
   font-style: normal;
   font-weight: normal;
-  width: 100%;
+  width: 100%vw;
+  height: 100%vh;
   text-align: center; }
 
 * {
@@ -52,7 +98,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
-  height: 600px; }
+  height: 600px;
+  -webkit-transition: all 1s ease-in-out 1s;
+  transition: all 1s ease-in-out 1s; }
   .main-header .logo {
     margin-bottom: 15px;
     -ms-flex-item-align: center;
@@ -107,7 +155,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
-  height: 150px; }
+  height: 150px;
+  -webkit-transition: all 1s ease-in-out 1s;
+  transition: all 1s ease-in-out 1s; }
   .article-header .logo {
     margin-bottom: 10px; }
     .article-header .logo img {
@@ -129,7 +179,14 @@ body {
               flex-direction: row;
       -webkit-box-flex: 5rem;
           -ms-flex-positive: 5rem;
-              flex-grow: 5rem; } }
+              flex-grow: 5rem;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding-left: 5rem; }
+      .article-header img, .article-header p, .article-header .section-selector {
+        -webkit-transform: translate(50px);
+                transform: translate(50px); } }
   @media (min-width: 1000px) {
     .article-header {
       -webkit-box-orient: horizontal;
@@ -172,13 +229,16 @@ body {
     max-width: 100%; }
     .articles .news .abstract {
       position: absolute;
-      bottom: 0%;
+      bottom: -40%;
       color: #ffffff;
       background: rgba(0, 0, 0, 0.6);
       -webkit-box-flex: 0;
           -ms-flex: 0 1 100%;
               flex: 0 1 100%;
-      display: none; }
+      height: 50px;
+      overflow: hidden;
+      -webkit-transition: bottom 0.2s ease-in-out 0s;
+      transition: bottom 0.2s ease-in-out 0s; }
     .articles .news #news-img {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -195,19 +255,24 @@ body {
       -ms-flex-flow: wrap;
           flex-flow: wrap; }
     .articles .news:hover > .abstract {
-      display: block; }
+      bottom: 0; }
     @media (min-width: 600px) {
       .articles .news {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 50%;
                 flex: 0 1 50%;
-        max-width: 50%; } }
+        max-width: 50%; }
+        .articles .news .abstract {
+          height: 75px; } }
     @media (min-width: 1000px) {
       .articles .news {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 25%;
                 flex: 0 1 25%;
-        max-width: 25%; } }
+        max-width: 25%; }
+        .articles .news .abstract {
+          text-align: left;
+          height: 100px; } }
 
 .web-info {
   color: #c2c2c2;

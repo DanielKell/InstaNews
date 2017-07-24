@@ -23,11 +23,14 @@
 
         .abstract {
             position: absolute;
-            bottom: 0%;
+            bottom: -40%;
             color: $font-color;
             background: rgba(0, 0, 0, 0.6);
             flex: 0 1 100%;
-            display: none;
+            // display: none;
+            height: 50px;
+            overflow: hidden;
+            transition: bottom 0.2s ease-in-out 0s;
         }
         #news-img {
             display: flex;
@@ -40,15 +43,26 @@
             flex-flow: wrap;
         }
         &:hover > .abstract {
-            display: block;
+            // display: block;
+            bottom: 0;
+            
         }
         @include tablet {
             flex: 0 1 50%;
             max-width: 50%;
+
+            .abstract {
+                height: 75px;
+            }
         }
         @include desktop {
             flex: 0 1 25%;
             max-width: 25%;
+
+            .abstract {
+                text-align: left;
+                height: 100px;
+            }
         }
     }
 }
