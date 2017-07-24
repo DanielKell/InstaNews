@@ -15,6 +15,12 @@ $(document).ready(function () {
       })
       .done(function (data) {
 
+        $("select").click(function () {
+          $(".loader").fadeIn(3000);
+        }, function () {
+          $(".loader").fadeOut(1000);
+        });
+
         $('.news').remove();
 
         var articles = '';
@@ -28,7 +34,7 @@ $(document).ready(function () {
         $.each(articlesWithImages, function (key, value) {
 
           articles += '<div class="news">';
-          articles += '<a href="' + value.url + '" target="_blank">' + '<img src="' + value.multimedia[4].url + '" id="news-img"/>' + '</a>';
+          articles += '<a href="' + value.url + '" class="news-anchor"  target="_blank">' + '<img src="' + value.multimedia[4].url + '" id="news-img"/>' + '</a>';
           articles += '<p class="abstract">' + value.abstract + '</p>'
           articles += '</div>';
 
@@ -41,15 +47,12 @@ $(document).ready(function () {
         throw err;
       });
 
-    //   $(".articles").hover(function() {
-    //     $("p").fadeIn(1000);
-    // }, function () {
-    //     $("p").fadeOut(1000);
-  });
+    $(".news-img").hover(function () {
+      $(".news").children('.abstract').fadeIn(1000);
+    }, function () {
+      $(".news").children(".abstract").fadeOut(1000);
+    });
 
   });
 
 });
-
-
-
