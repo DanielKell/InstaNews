@@ -5,10 +5,11 @@
     align-items: center;
     padding: 2rem;
     height: 600px;
-    transition: all 1s ease-in-out 1s;
+    margin-bottom: 0;
 
     .logo {
-        margin-bottom: 15px;
+        transition: margin-bottom 1s ease-in-out 1s;
+        margin-bottom: 25px;
         align-self: center;
     }
     p {
@@ -75,10 +76,7 @@
 
         img {
             margin-right: 25px;
-
-            p, .section-selector {
-                margin-left: 50px;
-            }
+            margin-left: 25px;
         }
     }
 
