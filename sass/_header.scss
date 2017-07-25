@@ -42,7 +42,7 @@
     align-items: center;
     padding: 1rem;
     height: 150px;
-    transition: all 1s ease-in-out 1s;
+    // transition: all 1s ease-in-out 1s;
 
     .logo {
         margin-bottom: 10px;
@@ -50,16 +50,21 @@
         img {
             height: 90px;
             width: 90px;
+            margin-right: 0;
+            transition: margin-right 1s;
         }
     }
     p {
         margin-bottom: 10px;
         align-self: center;
+        margin-left: 0;
+        transition: margin-left 1s;
     }
     .section-selector {
         align-self: center;
         width: 100px;
-        
+        margin-left: 0;
+        transition: margin-left 1s;
     }
 
     @include tablet {
@@ -68,14 +73,20 @@
         justify-content: flex-start;
         padding-left: 5rem;
 
-        img, p, .section-selector {
-            transform: translate(50px);
+        img {
+            margin-right: 25px;
+
+            p, .section-selector {
+                margin-left: 50px;
+            }
         }
     }
+
     @include desktop {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+
         .logo {
             padding-right: 3rem;
             flex-grow: 1.5rem;
