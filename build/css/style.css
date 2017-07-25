@@ -244,9 +244,9 @@ body {
           -ms-flex: 0 1 100%;
               flex: 0 1 100%;
       display: none;
-      height: 50px;
-      -webkit-transition: bottom ease-in-out 3s;
-      transition: bottom ease-in-out 3s; }
+      height: 0px;
+      -webkit-transition: bottom ease-in-out .9s;
+      transition: bottom ease-in-out .9s; }
     .articles .news #news-img {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -263,8 +263,9 @@ body {
       -ms-flex-flow: wrap;
           flex-flow: wrap; }
     .articles .news:hover > .abstract {
-      display: block;
-      bottom: 0; }
+      bottom: 0;
+      height: 35%;
+      display: block; }
     @media (min-width: 600px) {
       .articles .news {
         -webkit-box-flex: 0;

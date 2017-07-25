@@ -28,8 +28,9 @@
             background: rgba(0, 0, 0, 0.6);
             flex: 0 1 100%;
             display: none;
-            height: 50px;
-            transition: bottom ease-in-out 3s;
+            // overflow: hidden;
+            height: 0px;
+            transition: bottom ease-in-out .9s;
         }
         #news-img {
             display: flex;
@@ -42,9 +43,11 @@
             flex-flow: wrap;
         }
         &:hover > .abstract {
-            display: block;
+            // display: block;
             bottom: 0;
-            
+            height: 35%;
+            display: block;
+            // overflow: hidden;
         }
         @include tablet {
             flex: 0 1 50%;
