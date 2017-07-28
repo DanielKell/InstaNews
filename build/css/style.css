@@ -109,7 +109,8 @@ body {
   .main-header p {
     margin-bottom: 15px;
     -ms-flex-item-align: center;
-        align-self: center; }
+        align-self: center;
+    color: white; }
   .main-header .section-selector {
     -ms-flex-item-align: center;
         align-self: center;
